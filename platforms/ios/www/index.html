@@ -24,10 +24,22 @@
   <body ng-app="starter" class="platform-ios platform-cordova platform-webview">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
+      <ion-header-bar class="bar-stable" >
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content ng-controller="ctrlCarousel">
+        <div class="item">
+          <custom-carousel values="{{values}}" initvalue="1" id="1" callback="valuecarousel"/>
+        </div>
+
+        <div class="item">
+          <custom-carousel values="{{values}}" id="2" callback="valuecarousel"/>
+        </div>
+
+        <div class="item">
+          <button class="button button-positive button-block" ng-click="getValue()"> value</button>
+        </div>
+
       </ion-content>
     </ion-pane>
   </body>
